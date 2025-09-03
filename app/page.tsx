@@ -45,7 +45,7 @@ export default function Home() {
                     href="https://en.wikipedia.org/wiki/Lehmer_random_number_generator?utm_source=chatgpt.com"
                     target="_blank"
                   >
-                    Source
+                    <cite>Source</cite>
                   </a>
                 </p>
               </div>
@@ -60,7 +60,7 @@ export default function Home() {
                   href="https://en.wikipedia.org/wiki/ACORN_%28random_number_generator%29"
                   target="_blank"
                 >
-                  Source
+                  <cite>Source</cite>
                 </a>
               </p>
             </li>
@@ -74,7 +74,7 @@ export default function Home() {
                   href="https://en.wikipedia.org/wiki/Counter-based_random_number_generator"
                   target="_blank"
                 >
-                  Source
+                  <cite>Source</cite>
                 </a>
               </p>
             </li>
@@ -89,7 +89,7 @@ export default function Home() {
                   href="https://en.wikipedia.org/wiki/Mersenne_Twister"
                   target="_blank"
                 >
-                  Source
+                  <cite>Source</cite>
                 </a>
               </p>
             </li>
