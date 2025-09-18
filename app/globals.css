@@ -1,8 +1,10 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-roboto-slab: 'Roboto Slab', serif;
 }
 
 @theme inline {
@@ -16,4 +18,50 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-roboto-slab {
+  font-family: var(--font-roboto-slab);
+}
+
+.aside-title {
+  font-family: var(--font-roboto-slab);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.img-thumb {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 0.5rem;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.img-thumb:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+}
+
+.enlarged-img-caption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+h2 {
+  font-family: var(--font-roboto-slab);
+  color: #2d3748;
+  letter-spacing: 0.01em;
+}
+
+em {
+  color: #b83280;
+  font-style: italic;
+  background: #f7fafc;
+  padding: 0 0.2em;
+  border-radius: 0.2em;
 }

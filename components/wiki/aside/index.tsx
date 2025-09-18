@@ -25,13 +25,13 @@ const Aside = () => {
       {/*Note that Image component is a built in nextJs component that ensuring the src is grabbing from the public folder
         Functions exactly the same as <img> component */}
       <aside className="right-0 h-full w-80 bg-white p-4 flex flex-col gap-4 z-20">
-        <h3 className="text-lg font-semibold mb-2 text-center">Images (Click to enlarge)</h3>
+        <h3 className="aside-title">Images (Click to enlarge)</h3>
         {images.map((img, idx) => (
           <Image
             key={idx}
             src={img.src}
             alt={img.alt}
-            className="rounded shadow mb-2 w-full object-cover cursor-pointer"
+            className="img-thumb"
             height={90}
             width={200}
             onClick={() => setEnlargedIdx(idx)}
@@ -59,7 +59,7 @@ const Aside = () => {
               height={600}
               className="max-w-full max-h-[70vh] rounded"
             />
-            <div className="mt-2 text-center text-sm text-gray-600">{images[enlargedIdx].alt}</div>
+            <div className="enlarged-img-caption">{images[enlargedIdx].alt}</div>
           </div>
         </div>
       )}
