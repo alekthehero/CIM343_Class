@@ -20,6 +20,8 @@ const images = [
 
 const Aside = () => {
   const [enlargedIdx, setEnlargedIdx] = useState<number | null>(null);
+  const [isHoveredIdx, setIsHoveredIdx] = useState<number | null>(null);
+
   return (
     <>
       {/*Note that Image component is a built in nextJs component that ensuring the src is grabbing from the public folder
@@ -36,6 +38,14 @@ const Aside = () => {
               height={90}
               width={200}
               onClick={() => setEnlargedIdx(idx)}
+              onMouseEnter={() => setIsHoveredIdx(idx)}
+              onMouseLeave={() => setIsHoveredIdx(null)}
+              style={{
+                cursor: "pointer",
+                border: isHoveredIdx === idx ? "3px solid #3182ce" : "3px solid transparent",
+                borderRadius: 8,
+                transition: "border 0.3s",
+              }}
             />
           ))}
         </div>
