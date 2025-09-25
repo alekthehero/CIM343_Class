@@ -3,39 +3,47 @@ import Aside from "@/components/wiki/aside";
 
 export default function Home() {
   return (
-    <div className="flex">
-      <main className="flex-1 pr-60">
+    <div className="grid grid-cols-1 md:grid-cols-[1fr_20rem] min-h-screen">
+      <main className="p-4">
         <Section header="Random Number Generation">
-          Random number generation involves producing sequences of numbers or symbols in such a way that no future value
-          can be predicted better than by chance. These sequences may exhibit patterns when retrospectively analyzed,
-          but they are <mark>inherently unpredictable</mark>.
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              Random number generation involves producing sequences of numbers or symbols in such a way that no future
+              value can be predicted better than by chance. These sequences may exhibit patterns when retrospectively
+              analyzed, but they are <mark>inherently unpredictable</mark>.
+            </div>
+            <div>
+              <ul className="list-disc list-inside">
+                <li>Used in cryptography</li>
+                <li>Simulations</li>
+                <li>Games</li>
+                <li>Statistics</li>
+              </ul>
+            </div>
+          </div>
         </Section>
         <Section header="Types of Random Number Generators">
-          <p>
-            There are <em>two</em> primary types of random number generators
-          </p>
-          <ol className="list-decimal list-inside pl-2 pt-2">
-            <li>
-              <strong>true random number generators (TRNGs)</strong>
-              <p className="ml-5">
-                TRNGs derive randomness from physical processes, such as electronic noise or radioactive decay.
-              </p>
-            </li>
-            <li>
-              <strong>pseudorandom number generators (PRNGs)</strong>
-              <p className="ml-5">
-                PRNGs use mathematical algorithms to produce sequences that approximate the properties of random
-                numbers.
-              </p>
-            </li>
-          </ol>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <strong>True Random Number Generators (TRNGs)</strong>
+              <p>Derive randomness from physical processes, such as electronic noise or radioactive decay.</p>
+            </div>
+            <div>
+              <strong>Pseudorandom Number Generators (PRNGs)</strong>
+              <p>Use mathematical algorithms to produce sequences that approximate the properties of random numbers.</p>
+            </div>
+            <div>
+              <strong>Hybrid RNGs</strong>
+              <p>Combine physical and algorithmic sources for improved randomness.</p>
+            </div>
+          </div>
         </Section>
         <Section header="PRNG Family: Variants & Examples">
           <ul className="list-disc list-inside pl-2 pt-2">
             <li>
               <strong>Linear Congruential Generators (LCGs)</strong>
               <div className="ml-5">
-                <p>One of the earliest and simplest PRNG types, running on the formula:</p>{" "}
+                <p>One of the earliest and simplest PRNG types, running on the formula:</p>
                 <code>Xₖ₊₁ = (a × Xₖ) mod m</code>
                 <p>
                   An example is the Lehmer RNG (also known as Park–Miller), used in systems like the Sinclair ZX81 and

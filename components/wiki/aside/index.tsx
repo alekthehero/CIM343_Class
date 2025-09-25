@@ -26,17 +26,19 @@ const Aside = () => {
         Functions exactly the same as <img> component */}
       <aside className="right-0 h-full w-80 bg-white p-4 flex flex-col gap-4 z-20">
         <h3 className="aside-title">Images (Click to enlarge)</h3>
-        {images.map((img, idx) => (
-          <Image
-            key={idx}
-            src={img.src}
-            alt={img.alt}
-            className="img-thumb"
-            height={90}
-            width={200}
-            onClick={() => setEnlargedIdx(idx)}
-          />
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {images.map((img, idx) => (
+            <Image
+              key={idx}
+              src={img.src}
+              alt={img.alt}
+              className="img-thumb"
+              height={90}
+              width={200}
+              onClick={() => setEnlargedIdx(idx)}
+            />
+          ))}
+        </div>
       </aside>
       {enlargedIdx !== null && (
         <div className="fixed inset-0 flex items-center justify-center z-50" onClick={() => setEnlargedIdx(null)}>
