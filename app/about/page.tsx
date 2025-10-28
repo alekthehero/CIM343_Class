@@ -1,12 +1,11 @@
-"use client"
+"use client";
 
-import {useEffect} from "react";
+import { useEffect } from "react";
 import UIkit from "uikit";
 
 export default function AboutPage() {
-
   useEffect(() => {
-    UIkit.notification("To Go Back Click The Home Button")
+    UIkit.notification("To Go Back Click The Home Button");
   }, []);
 
   return (
