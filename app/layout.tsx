@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import 'uikit/dist/css/uikit.min.css';
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
 import "./globals.css";
 import Header from "@/components/wiki/header";
 
@@ -19,6 +22,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Alek Bronsky" }],
   keywords: ["CIM343", "Wiki", "Class Page", "UM"],
 };
+
+UIkit.use(Icons);
 
 export default function RootLayout({
   children,

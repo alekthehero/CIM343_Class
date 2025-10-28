@@ -3,9 +3,10 @@ import Aside from "@/components/wiki/aside";
 
 export default function Home() {
   return (
+    <>
     <div className="grid grid-cols-1 md:grid-cols-[1fr_20rem] min-h-screen">
       <main className="p-4">
-        <Section header="Random Number Generation">
+        <Section header="Random Number Generation" uk-scrollspy="cls: uk-animation-fade; delay: 300; repeat: true">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               Random number generation involves producing sequences of numbers or symbols in such a way that no future
@@ -22,7 +23,8 @@ export default function Home() {
             </div>
           </div>
         </Section>
-        <Section header="Types of Random Number Generators">
+        <hr className="uk-divider-icon" />
+        <Section header="Types of Random Number Generators" uk-scrollspy="cls: uk-animation-fade; delay: 300; repeat: true">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
               <strong>True Random Number Generators (TRNGs)</strong>
@@ -38,7 +40,8 @@ export default function Home() {
             </div>
           </div>
         </Section>
-        <Section header="PRNG Family: Variants & Examples">
+        <hr className="uk-divider-icon" />
+        <Section header="PRNG Family: Variants & Examples" uk-scrollspy="cls: uk-animation-fade; delay: 300; repeat: true">
           <ul className="list-disc list-inside pl-2 pt-2">
             <li>
               <strong>Linear Congruential Generators (LCGs)</strong>
@@ -103,12 +106,13 @@ export default function Home() {
             </li>
           </ul>
         </Section>
-        <Section>
+        <Section uk-scrollspy="cls: uk-animation-fade; delay: 300; repeat: true">
           Overall, random number generation is a fundamental concept with wide-ranging applications in technology and
           science.
         </Section>
       </main>
       <Aside />
     </div>
+      </>
   );
 }

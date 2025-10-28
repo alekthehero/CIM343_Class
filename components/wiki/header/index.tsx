@@ -1,39 +1,61 @@
-import Button from "@/components/shared/button";
 import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="border-b p-4 mb-4">
-      {/* Desktop navigation (grid) */}
-      <div className="w-full grid grid-cols-3 gap-4 items-center hidden sm:grid">
-        <div className="col-span-1 sm:w-full sm:text-center">
-          <h1>CIM 343</h1>
+    <>
+      {/* Mobile navbar: visible on small screens only */}
+      <nav className="uk-navbar-container uk-margin block md:hidden">
+        <div className="uk-container">
+          <div data-uk-navbar="mode: click">
+            <div className="uk-navbar-left">
+              <a className="uk-navbar-toggle" href="#">
+                <span data-uk-navbar-toggle-icon></span>
+                <span className="uk-margin-xsmall-left">Menu</span>
+              </a>
+              <div className="uk-navbar-dropdown">
+                <ul className="uk-nav uk-navbar-dropdown-nav">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li>
+                    <a href="/about">About Me</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="col-span-1 sm:w-full sm:text-center">
-          <h1>Wikipedia Assignment</h1>
-        </div>
-        <div className="col-span-1 space-x-2 sm:space-x-0 sm:space-y-2 sm:flex sm:flex-col sm:items-center">
-          <Link href="/about">
-            <Button>About Me</Button>
-          </Link>
-        </div>
-      </div>
-      {/* Mobile navigation */}
-      <nav className="block sm:hidden w-full mt-2">
-        <ul className="flex flex-col items-center gap-2">
-          <li>
-            <Link href="/">
-              <Button className="w-full">Home</Button>
-            </Link>
-          </li>
-          <li>
-            <Link href="/about">
-              <Button className="w-full">About Me</Button>
-            </Link>
-          </li>
-        </ul>
       </nav>
-    </header>
+
+      {/* Desktop (normal) header: hidden on small screens */}
+      <nav className="uk-navbar-container hidden md:block">
+        <div className="uk-container">
+          <div>
+            <div className="uk-navbar-center">
+              <div className="uk-navbar-center-left">
+                <ul className="uk-navbar-nav">
+                  <li className="uk-active">
+                    <Link href="/">Home</Link>
+                  </li>
+                </ul>
+              </div>
+              <Link className="uk-navbar-item uk-logo" href="/">
+                CIM 343 Wikipedia Assignment
+              </Link>
+              <div className="uk-navbar-center-right">
+                <ul className="uk-navbar-nav">
+                  <li>
+                    <Link href="/about">About Me</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <hr className="uk-divider-icon hidden md:block" />
+    </>
   );
 };
 

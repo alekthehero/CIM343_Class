@@ -1,4 +1,14 @@
+"use client"
+
+import {useEffect} from "react";
+import UIkit from "uikit";
+
 export default function AboutPage() {
+
+  useEffect(() => {
+    UIkit.notification("To Go Back Click The Home Button")
+  }, []);
+
   return (
     <main className="max-w-2xl mx-auto p-8">
       <h1 className="text-3xl font-bold mb-4">About Me</h1>

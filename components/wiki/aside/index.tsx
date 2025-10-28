@@ -35,7 +35,7 @@ const Aside = () => {
               src={img.src}
               alt={img.alt}
               className="img-thumb"
-              height={90}
+              height={200}
               width={200}
               onClick={() => setEnlargedIdx(idx)}
               onMouseEnter={() => setIsHoveredIdx(idx)}
